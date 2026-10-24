@@ -1,4 +1,4 @@
-services:
+ ervices:
   mc:
     image: itzg/minecraft-server
     container_name: minecraft-server
@@ -8,7 +8,6 @@ services:
       VERSION: "26.1.2"
       MEMORY: "4G"
       TZ: "America/Sao-Paulo"
-      ENFORCE_WHITELIST: "TRUE"
       ONLINE_MODE: "TRUE"
       MODRINTH_PROJECTS: |
         viaversion 
