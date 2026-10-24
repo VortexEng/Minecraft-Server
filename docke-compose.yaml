@@ -1,0 +1,31 @@
+services:
+  mc:
+    image: itzg/minecraft-server
+    container_name: minecraft-server
+    environment:
+        EULA: "TRUE"
+        TYPE: "PAPER"
+        VERSION: "26.1.2"
+        MEMORY: "4G"
+        TZ: "America/Sao-Paulo"
+        ENFORCE_WHITELIST: "TRUE"
+        ONLINE_MODE: "TRUE"
+        MODRINTH_PROJECTS: |
+        viaversion 
+        chunky
+        lagfixer
+        coreprotect
+      PLUGINS: |
+        https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
+        https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
+        
+    ports:
+      - "25565:25565"        # Java
+      - "19132:19132/udp"    # Bedrock 
+    volumes:
+      - ./data:/data
+    networks:
+      - mc-network
+    restart: unless-stopped
+
+
