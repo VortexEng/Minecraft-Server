@@ -3,14 +3,14 @@ services:
     image: itzg/minecraft-server
     container_name: minecraft-server
     environment:
-        EULA: "TRUE"
-        TYPE: "PAPER"
-        VERSION: "26.1.2"
-        MEMORY: "4G"
-        TZ: "America/Sao-Paulo"
-        ENFORCE_WHITELIST: "TRUE"
-        ONLINE_MODE: "TRUE"
-        MODRINTH_PROJECTS: |
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      VERSION: "26.1.2"
+      MEMORY: "4G"
+      TZ: "America/Sao-Paulo"
+      ENFORCE_WHITELIST: "TRUE"
+      ONLINE_MODE: "TRUE"
+      MODRINTH_PROJECTS: |
         viaversion 
         chunky
         lagfixer
@@ -40,4 +40,3 @@ networks:
   mc-network:
     name: mc-network
     driver: bridge 
-
