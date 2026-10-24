@@ -27,5 +27,17 @@ services:
     networks:
       - mc-network
     restart: unless-stopped
+  
+  playit:
+    image: ghcr.io/playit-cloud/playit-agent:latest
+    container_name: playit-agent
+    environment:
+      - SECRET_KEY=${SECRET_KEY} 
+    network_mode: host
+    restart: unless-stopped
 
+networks:
+  mc-network:
+    name: mc-network
+    driver: bridge 
 
