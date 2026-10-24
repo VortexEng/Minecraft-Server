@@ -50,5 +50,5 @@ Pronto temos o tunnel Beadrock criado, seus amigos podem entrar no jogo
 > Note que o playit gera o endereço para você compartilhar
 
 # Comandos Uteis
-docker exec minecraft-server rcon-cli op SeuNick -> Transforma o user no operador no Minecraft Java
-docker exec minecraft-server rcon-cli op .SeuNick -> Transforma o user no operador no Minecraft Beadrock
+- docker exec minecraft-server rcon-cli op SeuNick -> Transforma o user no operador no Minecraft Java
+- docker exec minecraft-server rcon-cli op .SeuNick -> Transforma o user no operador no Minecraft Beadrock
